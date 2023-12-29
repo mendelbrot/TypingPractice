@@ -17,9 +17,9 @@
             <Button Content="Open File" Click="OpenFileButton_Click" Margin="10" />
         </StackPanel>
 
-        <Grid Grid.Column="1">
-            
-        </Grid>
+        <ScrollViewer Grid.Column="1">
+            <TextBox x:Name="textContent" IsReadOnly="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+        </ScrollViewer>
         
     </Grid>
 </Window>

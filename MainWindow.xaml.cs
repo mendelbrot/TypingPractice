@@ -9,6 +9,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
+using System.IO;
 
 namespace TypingPractice;
 
@@ -17,6 +18,9 @@ namespace TypingPractice;
 /// </summary>
 public partial class MainWindow : Window
 {
+    private string? _filePath;
+    private string? _fileContent;
+
     public MainWindow()
     {
         InitializeComponent();
@@ -27,8 +31,29 @@ public partial class MainWindow : Window
         OpenFileDialog openFileDialog = new OpenFileDialog();
         if (openFileDialog.ShowDialog() == true)
         {
-            string filePath = openFileDialog.FileName;
-
+            _filePath = openFileDialog.FileName;
+            LoadFileContent();
+            DisplayFileContent();
         }
+    }
+
+    private void LoadFileContent()
+    {
+        try
+        {
+            #pragma warning disable CS8604 // Possible null reference
+            _fileContent = File.ReadAllText(_filePath);
+            #pragma warning restore CS8604
+        }
+        catch (Exception ex) 
+        {
+            MessageBox.Show($"Error reading file: {ex.Message}");
+            _fileContent = null;
+        }
+    }
+
+    private void DisplayFileContent()
+    {
+        textContent.Text = _fileContent;
     }
 }

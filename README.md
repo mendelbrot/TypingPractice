@@ -1,8 +1,8 @@
-Typing Practice
+# Typing Practice
 
-This is a WPF project for a desktop application. This is an application that allows users to practice typing text and it shows the next on the screen unedited, with line breaks so that the user can read, learn, and enjoy the text as they are typing. 
+This is a WPF project for a desktop application. This is an application that allows users to practice typing text and it shows the text on the screen unedited with line breaks, so that the user can read, learn, and enjoy the text as they are typing. 
 
-This is great for practice typing poetry, stories, articles, or powershell scripts. I created this because other typing apps i've tried, remove line breaks, which ruins the enjoyment of poems and other texts.
+This is great for practice typing poetry, stories, articles, or PowerShell scripts. I created this because other typing apps I've tried remove line breaks, which ruins the enjoyment of poems and other texts.
 
 These are the features:
 
