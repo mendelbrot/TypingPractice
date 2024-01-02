@@ -18,7 +18,7 @@
         </StackPanel>
 
         <ScrollViewer Grid.Column="1">
-            <TextBox x:Name="textContent" IsReadOnly="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"/>
+            <RichTextBox x:Name="typingArea" IsReadOnly="True" TextInput="TypingArea_TextInput"/>
         </ScrollViewer>
         
     </Grid>
